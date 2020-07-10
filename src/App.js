@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Child2 from './composent/Propriete2'
+import Child1 from './composent/Propriete'
 
-function App() {
+class App extends React.Component {
+  GoodViews=()=>{
+    alert('i hope you learnt new knowledge')
+  }
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{marginLeft:'509px',marginRight:"50px",marginTop:"50px",alignContent:'center',justifyContent:'center'}}>
+      <Child1 src="/cc.jpg" title="nature" abc={this.GoodViews} widthImg="400px"  />
+      <Child2 style={{color:'red'}}>Med aMine</Child2>
+      <Child2 petit>Reseau</Child2>
     </div>
   );
+}
 }
 
 export default App;
